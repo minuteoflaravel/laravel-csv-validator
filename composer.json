@@ -1,0 +1,39 @@
+{
+    "name": "minuteoflaravel/laravel-csv-validator",
+    "description": "Adds CSV validator to your Laravel project",
+    "keywords": [
+        "laravel",
+        "csv",
+        "csv-validator",
+        "minuteoflaravel",
+    ],
+    "homepage": "https://github.com/minuteoflaravel/laravel-csv-validator",
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "parsecsv/php-parsecsv": "^1.3"
+    },
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "MinuteOfLaravel\\CsvValidator\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Minute Of Laravel",
+            "email": "contact@minuteoflaravel.com",
+            "homepage": "https://minuteoflaravel.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MinuteOfLaravel\\CsvValidator\\CsvValidatorServiceProvider"
+            ],
+            "aliases": {
+                "CsvValidator": "MinuteOfLaravel\\CsvValidator\\CsvValidator"
+            }
+        }
+    }
+}
