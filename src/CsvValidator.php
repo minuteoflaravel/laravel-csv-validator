@@ -22,7 +22,7 @@ class CsvValidator {
     public function validateCsv(string $attribute, $value, array $parameters): bool
     {
         $csv = new Csv();
-        $csv->parse($value->getPathname());
+        $csv->parseFile($value->getPathname());
         return empty($csv->error);
     }
 }
