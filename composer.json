@@ -5,7 +5,7 @@
         "laravel",
         "csv",
         "csv-validator",
-        "minuteoflaravel",
+        "minuteoflaravel"
     ],
     "homepage": "https://github.com/minuteoflaravel/laravel-csv-validator",
     "require": {
