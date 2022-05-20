@@ -22,7 +22,16 @@ class CsvValidator {
     public function validateCsv(string $attribute, $value, array $parameters): bool
     {
         $csv = new Csv();
-        $csv->parseFile($value->getPathname());
+        if ($value instanceof \Livewire\TemporaryUploadedFile) {
+            $file = $value->getRealPath();
+        } else if ($value instanceof \Illuminate\Http\UploadedFile) {
+            $file = $value->getPathname();
+        } else {
+            throw new \Exception('CSV Validator: Unknown instance of uploaded file');
+        }
+
+        $csv->parseFile($file);
+
         return empty($csv->error);
     }
 }
