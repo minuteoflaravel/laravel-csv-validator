@@ -10,7 +10,7 @@ composer require minuteoflaravel/laravel-csv-validator
 ```
 
 ## Example
-To check if file is audio file and audio duration is 60 seconds:
+Check if a file has a CSV format:
 
 ```php
 $request->validate([
